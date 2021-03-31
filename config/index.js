@@ -1,3 +1,5 @@
+import path from 'path'
+
 const config = {
   projectName: 'taro-react-quick-start',
   date: '2021-3-31',
