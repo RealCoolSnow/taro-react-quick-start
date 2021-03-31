@@ -1,9 +1,12 @@
 import { Component } from 'react'
+import 'windi.css'
 import './app.less'
 
 class App extends Component {
 
-  componentDidMount () {}
+  componentDidMount () {
+    console.log('app created')
+  }
 
   componentDidShow () {}
 
