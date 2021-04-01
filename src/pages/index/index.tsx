@@ -1,25 +1,25 @@
 import { Component } from 'react'
-import { View, Text } from '@tarojs/components'
+import { View, Text, Button } from '@tarojs/components'
 import Logo from '../../components/Logo'
 import './index.less'
 
 export default class Index extends Component {
+  componentWillMount() {}
 
-  componentWillMount () { }
+  componentDidMount() {}
 
-  componentDidMount () { }
+  componentWillUnmount() {}
 
-  componentWillUnmount () { }
+  componentDidShow() {}
 
-  componentDidShow () { }
+  componentDidHide() {}
 
-  componentDidHide () { }
-
-  render () {
+  render() {
     return (
       <View className='flex flex-col items-center'>
         <Text>Hello world!</Text>
         <Logo />
+        <Button className='mt-2 w-full'>hello</Button>
       </View>
     )
   }
