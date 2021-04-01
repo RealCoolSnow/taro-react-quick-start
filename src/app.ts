@@ -1,22 +1,29 @@
 import { Component } from 'react'
+import { Provider } from 'react-redux'
 import 'windi.css'
 import './app.less'
+import configStore from './store'
+
+const store = configStore()
 
 class App extends Component {
-
-  componentDidMount () {
+  componentDidMount() {
     console.log('app created')
   }
 
-  componentDidShow () {}
+  componentDidShow() {}
 
-  componentDidHide () {}
+  componentDidHide() {}
 
-  componentDidCatchError () {}
+  componentDidCatchError() {}
 
   // this.props.children 是将要会渲染的页面
-  render () {
-    return this.props.children
+  render() {
+    return (
+      <Provider store={store}>
+        {this.props.children}
+      </Provider>
+    )
   }
 }
 
