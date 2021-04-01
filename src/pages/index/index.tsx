@@ -1,8 +1,9 @@
 import { Component } from 'react'
 import { View, Text, Navigator, Button, ITouchEvent } from '@tarojs/components'
 import Logo from '../../components/Logo'
-import './index.less'
 import { showAlert } from '../../utils/util'
+import './index.less'
+import Counter from '../../components/Counter'
 
 export default class Index extends Component {
   private handleClickHello(event: ITouchEvent): void {
@@ -23,6 +24,7 @@ export default class Index extends Component {
         <Navigator className='mt-2 w-full' url='/pages/hook-demo/index'>
           <Button className='w-full'>Hook Demo</Button>
         </Navigator>
+        <Counter />
       </View>
     )
   }
