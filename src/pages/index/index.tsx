@@ -20,6 +20,9 @@ export default class Index extends Component {
         <Navigator className='mt-2 w-full' url='/pages/about/index'>
           <Button className='w-full'>Show About</Button>
         </Navigator>
+        <Navigator className='mt-2 w-full' url='/pages/hook-demo/index'>
+          <Button className='w-full'>Hook Demo</Button>
+        </Navigator>
       </View>
     )
   }
