@@ -1,5 +1,6 @@
 {
-  "extends": ["taro/react", "plugin:react-hooks/recommended"],
+  "extends": ["taro/react"],
+  "plugins": ["react-hooks"],
   "rules": {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
