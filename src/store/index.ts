@@ -1,11 +1,10 @@
-import { createStore, applyMiddleware } from 'redux'
-import thunkMiddleware from 'redux-thunk'
-import { createLogger } from 'redux-logger'
-import rootReducer from './reducers'
+import { init, RematchDispatch, RematchRootState } from '@rematch/core'
+import { models, RootModel } from './models'
 
-const middlewares = [thunkMiddleware, createLogger()]
+export const store = init({
+  models
+})
 
-export default function configStore() {
-  const store = createStore(rootReducer, applyMiddleware(...middlewares))
-  return store
-}
+export type Store = typeof store
+export type Dispatch = RematchDispatch<RootModel>
+export type RootState = RematchRootState<RootModel>

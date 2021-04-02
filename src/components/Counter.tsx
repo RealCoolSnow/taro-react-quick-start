@@ -1,36 +1,34 @@
 import { Button, View } from '@tarojs/components'
 import React from 'react'
 import { connect } from 'react-redux'
-import { add, minus } from '../store/actions/counter'
+import { Dispatch, RootState } from '../store'
 
-interface IProps {
-  num: number
-  increment: () => void
-  decrement: () => void
-}
-
-const mapStateToProps = (state: any) => {
-  return {
-    num: state.counter.num
-  }
-}
-const mapDispatchToProps = (dispatch: any) => ({
-  increment: () => dispatch(add),
-  decrement: () => dispatch(minus)
+const mapState = (state: RootState) => ({
+  counter: state.counter
 })
 
-@(connect(mapStateToProps, mapDispatchToProps) as any)
-export default class Counter extends React.Component<IProps> {
-  public componentDidMount() {
+const mapDispatch = (dispatch: Dispatch) => ({
+  inc: () => dispatch.counter.inc,
+  dec: () => dispatch.counter.dec
+})
+
+type StateProps = ReturnType<typeof mapState>
+type DispatchProps = ReturnType<typeof mapDispatch>
+type Props = StateProps & DispatchProps
+
+class Counter extends React.Component<Props> {
+  componentDidMount() {
     console.log(this.props)
   }
   render() {
     return (
       <View>
-        <Button onClick={this.props.increment}>
-          click me {this.props.num}
+        <Button onClick={this.props.inc}>
+          click me {this.props.counter.num}
         </Button>
       </View>
     )
   }
 }
+
+export default connect(mapState, mapDispatch)(Counter)

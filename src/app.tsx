@@ -2,9 +2,7 @@ import { Component } from 'react'
 import { Provider } from 'react-redux'
 import 'windi.css'
 import './app.less'
-import configStore from './store'
-
-const store = configStore()
+import { store } from './store'
 
 class App extends Component {
   componentDidMount() {
