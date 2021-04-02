@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import Logo from '@/components/Logo'
 import { showAlert } from '@/utils/util'
 import Counter from '@/components/Counter'
+import Language from '@/components/Language'
 import { RootState, Dispatch } from '@/store/index'
 import { helloGet } from '@/service/api'
 import './index.less'
@@ -55,6 +56,7 @@ class Index extends Component<Props> {
         >
           language: {this.props.common.language}
         </Button>
+        <Language />
         <Counter />
         <Navigator className='mt-1 w-full' url='/pages/about/index'>
           <Button className='w-full bg-primary text-white'>Show About</Button>

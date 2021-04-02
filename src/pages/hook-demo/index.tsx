@@ -10,11 +10,11 @@ const HookComponent = () => {
     return () => {
       console.log('effect clean')
     }
-  }, [])
+  }, [count])
 
   return (
     <View>
-      <Text>
+      <Text className='text-sm'>
         You clicked {count} times, current time {time}
       </Text>
       <Button onClick={() => setCount(count + 1)} className='mt-2'>
