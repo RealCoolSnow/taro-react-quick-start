@@ -1,10 +1,10 @@
-import { Component } from 'react'
+import React from 'react'
 import { Provider } from 'react-redux'
 import 'windi.css'
 import './app.less'
 import { store } from './store'
 
-class App extends Component {
+class App extends React.Component {
   componentDidMount() {
     console.log('app created')
   }
@@ -16,7 +16,11 @@ class App extends Component {
   componentDidCatchError() {}
 
   render() {
-    return <Provider store={store}>{this.props.children}</Provider>
+    return (
+      <React.StrictMode>
+        <Provider store={store}>{this.props.children}</Provider>
+      </React.StrictMode>
+    )
   }
 }
 

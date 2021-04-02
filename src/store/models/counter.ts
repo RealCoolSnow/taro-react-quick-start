@@ -1,28 +1,18 @@
 import { createModel } from '@rematch/core'
 import { RootModel } from '.'
 
+export type CounterState = number
+
 export const counter = createModel<RootModel>()({
-  state: {
-    num: 0
-  },
+  state: 0,
   reducers: {
-    updateState(state, payload) {
-      return {
-        ...state,
-        ...payload
-      }
+    setNumber: (state: CounterState, payload: number) => {
+      return state + payload
     }
   },
   effects: dispatch => ({
-    async inc(payload, rootState) {
-      this.updateState({
-        num: rootState.common.num + 1
-      })
-    },
-    async dec(payload, rootState) {
-      this.updateState({
-        num: rootState.common.num - 1
-      })
+    async inc(payload: number) {
+      dispatch.counter.setNumber(payload)
     }
   })
 })

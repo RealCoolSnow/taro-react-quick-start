@@ -1,4 +1,4 @@
-import { Button, View } from '@tarojs/components'
+import { Button } from '@tarojs/components'
 import React from 'react'
 import { connect } from 'react-redux'
 import { Dispatch, RootState } from '../store'
@@ -8,8 +8,8 @@ const mapState = (state: RootState) => ({
 })
 
 const mapDispatch = (dispatch: Dispatch) => ({
-  inc: () => dispatch.counter.inc,
-  dec: () => dispatch.counter.dec
+  inc: () => dispatch.counter.inc(1),
+  dec: () => dispatch.counter.inc(-1)
 })
 
 type StateProps = ReturnType<typeof mapState>
@@ -22,11 +22,12 @@ class Counter extends React.Component<Props> {
   }
   render() {
     return (
-      <View>
+      <>
         <Button onClick={this.props.inc}>
-          click me {this.props.counter.num}
+          click me - {this.props.counter}
         </Button>
-      </View>
+        {/* <Button onClick={this.props.dec}>dec-{this.props.counter}</Button> */}
+      </>
     )
   }
 }
