@@ -1,9 +1,6 @@
-import { createModel } from '@rematch/core'
-import { RootModel } from '.'
-
 export type CounterState = number
 
-export const counter = createModel<RootModel>()({
+export const counter = {
   state: 0,
   reducers: {
     SET_NUMBER: (state: CounterState, payload: number) => {
@@ -15,4 +12,4 @@ export const counter = createModel<RootModel>()({
       dispatch.counter.SET_NUMBER(payload)
     }
   })
-})
+}
