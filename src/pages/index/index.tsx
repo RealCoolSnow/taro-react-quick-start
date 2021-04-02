@@ -1,31 +1,57 @@
 import { Component } from 'react'
 import { View, Text, Navigator, Button, ITouchEvent } from '@tarojs/components'
+import { connect } from 'react-redux'
 import Logo from '../../components/Logo'
 import { showAlert } from '../../utils/util'
 import './index.less'
 import Counter from '../../components/Counter'
+import { RootState, Dispatch } from '../../store'
 
-export default class Index extends Component {
+const mapState = (state: RootState) => ({
+  common: state.common
+})
+
+const mapDispatch = (dispatch: Dispatch) => ({
+  setLanguage: dispatch.common.setLanguage
+})
+
+type StateProps = ReturnType<typeof mapState>
+type DispatchProps = ReturnType<typeof mapDispatch>
+type Props = StateProps & DispatchProps
+
+class Index extends Component<Props> {
   private handleClickHello(event: ITouchEvent): void {
     showAlert('hello', `${new Date().valueOf()}:${event.type}`)
   }
   render() {
     return (
-      <View className='flex flex-col items-center p-2'>
-        <Text className='mt-2' onClick={this.handleClickHello.bind(this)}>
+      <View className='flex flex-col items-center px-4 py-1'>
+        <Text className='mt-1' onClick={this.handleClickHello.bind(this)}>
           Hello world!
         </Text>
-        <View className='mt-2'>
+        <View className='mt-1'>
           <Logo />
         </View>
-        <Navigator className='mt-2 w-full' url='/pages/about/index'>
+        <Navigator className='mt-1 w-full' url='/pages/about/index'>
           <Button className='w-full'>Show About</Button>
         </Navigator>
-        <Navigator className='mt-2 w-full' url='/pages/hook-demo/index'>
+        <Navigator className='mt-1 w-full' url='/pages/hook-demo/index'>
           <Button className='w-full'>Hook Demo</Button>
         </Navigator>
+        <Button
+          className='mt-1'
+          onClick={() => {
+            this.props.setLanguage(
+              this.props.common.language == 'en' ? 'cn' : 'en'
+            )
+          }}
+        >
+          language: {this.props.common.language}
+        </Button>
         <Counter />
       </View>
     )
   }
 }
+
+export default connect(mapState, mapDispatch)(Index)

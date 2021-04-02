@@ -6,13 +6,13 @@ export type CounterState = number
 export const counter = createModel<RootModel>()({
   state: 0,
   reducers: {
-    setNumber: (state: CounterState, payload: number) => {
+    SET_NUMBER: (state: CounterState, payload: number) => {
       return state + payload
     }
   },
   effects: dispatch => ({
     async inc(payload: number) {
-      dispatch.counter.setNumber(payload)
+      dispatch.counter.SET_NUMBER(payload)
     }
   })
 })

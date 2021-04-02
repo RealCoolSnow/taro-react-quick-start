@@ -17,9 +17,6 @@ type DispatchProps = ReturnType<typeof mapDispatch>
 type Props = StateProps & DispatchProps
 
 class Counter extends React.Component<Props> {
-  componentDidMount() {
-    console.log(this.props)
-  }
   render() {
     return (
       <>
