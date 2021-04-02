@@ -57,7 +57,7 @@ class Index extends Component<Props> {
         </Button>
         <Counter />
         <Navigator className='mt-1 w-full' url='/pages/about/index'>
-          <Button className='w-full'>Show About</Button>
+          <Button className='w-full bg-primary text-white'>Show About</Button>
         </Navigator>
         <Navigator className='mt-1 w-full' url='/pages/hook-demo/index'>
           <Button className='w-full'>Hook Demo</Button>
