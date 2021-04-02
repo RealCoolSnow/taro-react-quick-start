@@ -2,7 +2,7 @@
   "name": "taro-react-quick-start",
   "version": "1.0.0",
   "private": true,
-  "description": "Quick start project with Taro & React",
+  "description": "Quick start project with Taro & React & TypeScript.",
   "templateInfo": {
     "name": "default",
     "typescript": true,
