@@ -6,6 +6,7 @@ import { showAlert } from '../../utils/util'
 import './index.less'
 import Counter from '../../components/Counter'
 import { RootState, Dispatch } from '../../store'
+import { helloGet } from '../../service/api'
 
 const mapState = (state: RootState) => ({
   common: state.common
@@ -22,6 +23,17 @@ type Props = StateProps & DispatchProps
 class Index extends Component<Props> {
   private handleClickHello(event: ITouchEvent): void {
     showAlert('hello', `${new Date().valueOf()}:${event.type}`)
+  }
+  private httpTest() {
+    helloGet()
+      .then(res => {
+        console.log(res)
+        showAlert('httpTest', res)
+      })
+      .catch(err => {
+        console.log(err)
+        showAlert('httpTest', err)
+      })
   }
   render() {
     return (
@@ -47,6 +59,9 @@ class Index extends Component<Props> {
           }}
         >
           language: {this.props.common.language}
+        </Button>
+        <Button onClick={this.httpTest.bind(this)} className='mt-1'>
+          Http Test
         </Button>
         <Counter />
       </View>
