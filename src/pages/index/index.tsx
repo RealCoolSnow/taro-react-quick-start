@@ -1,12 +1,12 @@
 import { Component } from 'react'
 import { View, Text, Navigator, Button, ITouchEvent } from '@tarojs/components'
 import { connect } from 'react-redux'
-import Logo from '../../components/Logo'
-import { showAlert } from '../../utils/util'
+import Logo from '@/components/Logo'
+import { showAlert } from '@/utils/util'
+import Counter from '@/components/Counter'
+import { RootState, Dispatch } from '@/store/index'
+import { helloGet } from '@/service/api'
 import './index.less'
-import Counter from '../../components/Counter'
-import { RootState, Dispatch } from '../../store'
-import { helloGet } from '../../service/api'
 
 const mapState = (state: RootState) => ({
   common: state.common

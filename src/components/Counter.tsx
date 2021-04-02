@@ -1,7 +1,7 @@
 import { Button } from '@tarojs/components'
 import React from 'react'
 import { connect } from 'react-redux'
-import { Dispatch, RootState } from '../store'
+import { Dispatch, RootState } from '@/store/index'
 
 const mapState = (state: RootState) => ({
   counter: state.counter
