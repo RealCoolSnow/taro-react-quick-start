@@ -6,7 +6,9 @@
 
 - Taro with React
 
-- store(Redux)、network - works out-of-box
+- store、network - works out-of-box
+
+- [rematch](https://github.com/rematch/rematch) - easy Redux 
 
 - TypeScript
 
