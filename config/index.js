@@ -11,28 +11,33 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: `dist/${process.env.TARO_ENV}`,
+  alias: {
+    '@/components': path.resolve(__dirname, '..', 'src/components'),
+    '@/assets': path.resolve(__dirname, '..', 'src/assets'),
+    '@/service': path.resolve(__dirname, '..', 'src/service'),
+    '@/store': path.resolve(__dirname, '..', 'src/store'),
+    '@/utils': path.resolve(__dirname, '..', 'src/utils'),
+    '@/pages': path.resolve(__dirname, '..', 'src/pages')
+  },
   plugins: [
-    ['taro-plugin-tailwind', {
+    [
+      'taro-plugin-tailwind',
+      {
         // 具体参数见：https://github.com/windicss/vite-plugin-windicss/blob/main/packages/plugin-utils/src/options.ts#L10
       }
     ]
   ],
-  defineConstants: {
-  },
+  defineConstants: {},
   copy: {
-    patterns: [
-    ],
-    options: {
-    }
+    patterns: [],
+    options: {}
   },
   framework: 'react',
   mini: {
     postcss: {
       pxtransform: {
         enable: true,
-        config: {
-
-        }
+        config: {}
       },
       url: {
         enable: true,
@@ -55,8 +60,7 @@ const config = {
     postcss: {
       autoprefixer: {
         enable: true,
-        config: {
-        }
+        config: {}
       },
       cssModules: {
         enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true

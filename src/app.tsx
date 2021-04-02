@@ -1,8 +1,8 @@
 import React from 'react'
 import { Provider } from 'react-redux'
+import { store } from '@/store/index'
 import 'windi.css'
 import './app.less'
-import { store } from './store'
 
 class App extends React.Component {
   componentDidMount() {
