@@ -1060,6 +1060,11 @@
     schema-utils "^2.6.5"
     source-map "^0.7.3"
 
+"@rematch/core@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.npm.taobao.org/@rematch/core/download/@rematch/core-2.0.1.tgz#c69bba9637f41c403c8725834673b12a58a28f31"
+  integrity sha1-xpu6ljf0HEA8hyWDRnOxKliijzE=
+
 "@stencil/core@2.4.0":
   version "2.4.0"
   resolved "https://registry.npm.taobao.org/@stencil/core/download/@stencil/core-2.4.0.tgz#17b45629c8986e35dcbce3f7dab7d64beede83f2"
@@ -1434,7 +1439,7 @@
   resolved "https://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.7.3.tgz?cache=0&sync_timestamp=1613380401139&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fprop-types%2Fdownload%2F%40types%2Fprop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
   integrity sha1-KrDV2i5YFflLC51LldHl8kOrLKc=
 
-"@types/react-redux@^7.1.16":
+"@types/react-redux@^7.1.16", "@types/react-redux@^7.1.9":
   version "7.1.16"
   resolved "https://registry.npm.taobao.org/@types/react-redux/download/@types/react-redux-7.1.16.tgz#0fbd04c2500c12105494c83d4a3e45c084e3cb21"
   integrity sha1-D70EwlAMEhBUlMg9Sj5FwITjyyE=
