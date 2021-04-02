@@ -20,7 +20,7 @@ class Counter extends React.Component<Props> {
   render() {
     return (
       <>
-        <Button onClick={this.props.inc} className='mt-1'>
+        <Button onClick={this.props.inc} className='mt-1 w-full' type='warn'>
           click me - {this.props.counter}
         </Button>
         {/* <Button onClick={this.props.dec}>dec-{this.props.counter}</Button> */}

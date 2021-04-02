@@ -44,14 +44,9 @@ class Index extends Component<Props> {
         <View className='mt-1'>
           <Logo />
         </View>
-        <Navigator className='mt-1 w-full' url='/pages/about/index'>
-          <Button className='w-full'>Show About</Button>
-        </Navigator>
-        <Navigator className='mt-1 w-full' url='/pages/hook-demo/index'>
-          <Button className='w-full'>Hook Demo</Button>
-        </Navigator>
         <Button
-          className='mt-1'
+          className='mt-1 w-full'
+          type='primary'
           onClick={() => {
             this.props.setLanguage(
               this.props.common.language == 'en' ? 'cn' : 'en'
@@ -60,10 +55,17 @@ class Index extends Component<Props> {
         >
           language: {this.props.common.language}
         </Button>
-        <Button onClick={this.httpTest.bind(this)} className='mt-1'>
+        <Counter />
+        <Navigator className='mt-1 w-full' url='/pages/about/index'>
+          <Button className='w-full'>Show About</Button>
+        </Navigator>
+        <Navigator className='mt-1 w-full' url='/pages/hook-demo/index'>
+          <Button className='w-full'>Hook Demo</Button>
+        </Navigator>
+
+        <Button onClick={this.httpTest.bind(this)} className='mt-1 w-full'>
           Http Test
         </Button>
-        <Counter />
       </View>
     )
   }
