@@ -1690,10 +1690,10 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
-"@windicss/plugin-utils@0.10.4":
-  version "0.10.4"
-  resolved "https://registry.npm.taobao.org/@windicss/plugin-utils/download/@windicss/plugin-utils-0.10.4.tgz#ed9163b09e030f7358cc4742b1f2b6c92d084d5d"
-  integrity sha1-7ZFjsJ4DD3NYzEdCsfK2yS0ITV0=
+"@windicss/plugin-utils@0.12.5":
+  version "0.12.5"
+  resolved "https://registry.npm.taobao.org/@windicss/plugin-utils/download/@windicss/plugin-utils-0.12.5.tgz#d03517d1ae7a48b5b459e3d670e873d38b63e4a1"
+  integrity sha1-0DUX0a56SLW0WePWcOhz04tj5KE=
   dependencies:
     debug "^4.3.2"
     fast-glob "^3.2.5"
@@ -1701,20 +1701,20 @@
     micromatch "^4.0.2"
     pirates "^4.0.1"
     sucrase "^3.17.1"
-    windicss "^2.5.7"
+    windicss "^2.5.11"
 
-"@windicss/plugin-utils@^0.11.1":
-  version "0.11.3"
-  resolved "https://registry.npm.taobao.org/@windicss/plugin-utils/download/@windicss/plugin-utils-0.11.3.tgz#07a7df10b37d4696fe437ed5182f02f18ddc0c32"
-  integrity sha1-B6ffELN9Rpb+Q37VGC8C8Y3cDDI=
+"@windicss/plugin-utils@^0.14.0":
+  version "0.14.0"
+  resolved "https://registry.npm.taobao.org/@windicss/plugin-utils/download/@windicss/plugin-utils-0.14.0.tgz#ca5459e81d38fbe3c1eac0574ffdc8dba06961a4"
+  integrity sha1-ylRZ6B04++PB6sBXT/3I26BpYaQ=
   dependencies:
     debug "^4.3.2"
     fast-glob "^3.2.5"
     magic-string "^0.25.7"
-    micromatch "^4.0.2"
+    micromatch "^4.0.4"
     pirates "^4.0.1"
     sucrase "^3.17.1"
-    windicss "^2.5.8"
+    windicss "^2.5.14"
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -6597,6 +6597,14 @@ micromatch@^4.0.2:
     braces "^3.0.1"
     picomatch "^2.0.5"
 
+micromatch@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.npm.taobao.org/micromatch/download/micromatch-4.0.4.tgz?cache=0&sync_timestamp=1618054841521&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmicromatch%2Fdownload%2Fmicromatch-4.0.4.tgz#896d519dfe9db25fce94ceb7a500919bf881ebf9"
+  integrity sha1-iW1Rnf6dsl/OlM63pQCRm/iB6/k=
+  dependencies:
+    braces "^3.0.1"
+    picomatch "^2.2.3"
+
 miller-rabin@^4.0.0:
   version "4.0.1"
   resolved "https://registry.npm.taobao.org/miller-rabin/download/miller-rabin-4.0.1.tgz#f080351c865b0dc562a8462966daa53543c78a4d"
@@ -7614,6 +7622,11 @@ picomatch@^2.0.4, picomatch@^2.0.5, picomatch@^2.0.7, picomatch@^2.2.1:
   version "2.2.2"
   resolved "https://registry.npm.taobao.org/picomatch/download/picomatch-2.2.2.tgz#21f333e9b6b8eaff02468f5146ea406d345f4dad"
   integrity sha1-IfMz6ba46v8CRo9RRupAbTRfTa0=
+
+picomatch@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.npm.taobao.org/picomatch/download/picomatch-2.2.3.tgz?cache=0&sync_timestamp=1618049925917&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fpicomatch%2Fdownload%2Fpicomatch-2.2.3.tgz#465547f359ccc206d3c48e46a1bcb89bf7ee619d"
+  integrity sha1-RlVH81nMwgbTxI5Goby4m/fuYZ0=
 
 pify@^2.0.0, pify@^2.3.0:
   version "2.3.0"
@@ -9822,14 +9835,14 @@ tar@^6.0.2:
     mkdirp "^1.0.3"
     yallist "^4.0.0"
 
-taro-plugin-tailwind@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.npm.taobao.org/taro-plugin-tailwind/download/taro-plugin-tailwind-1.1.4.tgz#75b9b824dadc3185be6c14b72e0b7e53701af4df"
-  integrity sha1-dbm4JNrcMYW+bBS3Lgt+U3Aa9N8=
+taro-plugin-tailwind@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.npm.taobao.org/taro-plugin-tailwind/download/taro-plugin-tailwind-1.1.5.tgz#76046dc4384a22d448042427ec7b0fe91cba1d30"
+  integrity sha1-dgRtxDhKItRIBCQn7HsP6Ry6HTA=
   dependencies:
-    "@windicss/plugin-utils" "^0.11.1"
+    "@windicss/plugin-utils" "^0.14.0"
     postcss-selector-replace "^1.0.2"
-    windicss-webpack-plugin "^0.2.9"
+    windicss-webpack-plugin "^0.3.3"
 
 terser-webpack-plugin@^1.4.3:
   version "1.4.5"
@@ -10723,23 +10736,23 @@ wide-align@^1.1.0:
   dependencies:
     string-width "^1.0.2 || 2"
 
-windicss-webpack-plugin@^0.2.9:
-  version "0.2.9"
-  resolved "https://registry.npm.taobao.org/windicss-webpack-plugin/download/windicss-webpack-plugin-0.2.9.tgz#fc5fbcacd1cd1ccb7fb192aaee9e89cbf2979b35"
-  integrity sha1-/F+8rNHNHMt/sZKq7p6Jy/KXmzU=
+windicss-webpack-plugin@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.npm.taobao.org/windicss-webpack-plugin/download/windicss-webpack-plugin-0.3.3.tgz#74addc441b3c9e20bb727598bcacb6c8903d67d8"
+  integrity sha1-dK3cRBs8niC7cnWYvKy2yJA9Z9g=
   dependencies:
-    "@windicss/plugin-utils" "0.10.4"
+    "@windicss/plugin-utils" "0.12.5"
     debug "^4.3.1"
     loader-utils "^2.0.0"
     magic-string "^0.25.7"
     upath "^2.0.1"
     webpack-virtual-modules "^0.4.2"
-    windicss "^2.5.8"
+    windicss "^2.5.12"
 
-windicss@^2.5.7, windicss@^2.5.8:
-  version "2.5.9"
-  resolved "https://registry.npm.taobao.org/windicss/download/windicss-2.5.9.tgz#167811594e1d791839c58f2a97762f114499b1ca"
-  integrity sha1-FngRWU4deRg5xY8ql3YvEUSZsco=
+windicss@^2.5.11, windicss@^2.5.12, windicss@^2.5.14:
+  version "2.5.14"
+  resolved "https://registry.npm.taobao.org/windicss/download/windicss-2.5.14.tgz#41236ccc2517c0947e1adb69e0d5e8aa9bed9c1e"
+  integrity sha1-QSNszCUXwJR+Gttp4NXoqpvtnB4=
 
 word-wrap@~1.2.3:
   version "1.2.3"

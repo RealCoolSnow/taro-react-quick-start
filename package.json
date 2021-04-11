@@ -64,7 +64,7 @@
     "eslint-plugin-react": "^7.8.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "stylelint": "9.3.0",
-    "taro-plugin-tailwind": "^1.1.4",
+    "taro-plugin-tailwind": "^1.1.5",
     "typescript": "^4.1.0"
   }
 }
