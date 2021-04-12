@@ -9835,10 +9835,10 @@ tar@^6.0.2:
     mkdirp "^1.0.3"
     yallist "^4.0.0"
 
-taro-plugin-tailwind@^1.1.5:
-  version "1.1.5"
-  resolved "https://registry.npm.taobao.org/taro-plugin-tailwind/download/taro-plugin-tailwind-1.1.5.tgz#76046dc4384a22d448042427ec7b0fe91cba1d30"
-  integrity sha1-dgRtxDhKItRIBCQn7HsP6Ry6HTA=
+taro-plugin-tailwind@^1.1.4:
+  version "1.1.6"
+  resolved "https://registry.npm.taobao.org/taro-plugin-tailwind/download/taro-plugin-tailwind-1.1.6.tgz#ef1d62b21931d3f12d242db8cb0f3921b016b34f"
+  integrity sha1-7x1ishkx0/EtJC24yw85IbAWs08=
   dependencies:
     "@windicss/plugin-utils" "^0.14.0"
     postcss-selector-replace "^1.0.2"
