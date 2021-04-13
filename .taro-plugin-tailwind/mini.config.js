@@ -1,6 +1,5 @@
 module.exports = {
   prefixer: false,
-  separator: '_',
   compile: false,
   globalUtility: false,
   darkMode: 'media',
@@ -59,8 +58,17 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#1384E8'
+        primary: '#2664DE',
+        grey_btn: '#DADEE7',
+        green: {
+          500: '#06C160'
+        }
       }
+    }
+  },
+  variants: {
+    extend: {
+      backgroundColor: ['active']
     }
   }
 }
