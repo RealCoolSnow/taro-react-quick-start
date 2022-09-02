@@ -1,4 +1,3 @@
-import { Component } from 'react'
 import { View, Text, Navigator, Button, ITouchEvent } from '@tarojs/components'
 import { connect } from 'react-redux'
 import Logo from '@/components/Logo'
