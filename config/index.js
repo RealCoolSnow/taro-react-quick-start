@@ -12,18 +12,13 @@ const config = {
   sourceRoot: 'src',
   outputRoot: `dist/${process.env.TARO_ENV}`,
   alias: {
-    '@/components': path.resolve(__dirname, '..', 'src/components'),
-    '@/assets': path.resolve(__dirname, '..', 'src/assets'),
-    '@/service': path.resolve(__dirname, '..', 'src/service'),
-    '@/store': path.resolve(__dirname, '..', 'src/store'),
-    '@/utils': path.resolve(__dirname, '..', 'src/utils'),
-    '@/pages': path.resolve(__dirname, '..', 'src/pages')
+    '@/': path.resolve(__dirname, '..', 'src/')
   },
   plugins: [
     [
-      'taro-plugin-tailwind',
-      {
-        // 具体参数见：https://github.com/windicss/vite-plugin-windicss/blob/main/packages/plugin-utils/src/options.ts#L10
+      '@dcasia/mini-program-tailwind-webpack-plugin/dist/taro', {
+        enableRpx: true,
+        enableDebugLog: true
       }
     ]
   ],
