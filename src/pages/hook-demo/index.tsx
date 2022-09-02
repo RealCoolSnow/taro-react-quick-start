@@ -14,7 +14,7 @@ const HookComponent = () => {
 
   return (
     <View>
-      <Text className='text-sm'>
+      <Text className='text-base'>
         You clicked {count} times, current time {time}
       </Text>
       <Button onClick={() => setCount(count + 1)} className='mt-2'>
