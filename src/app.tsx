@@ -2,7 +2,7 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import { store } from '@/store/index'
 import 'windi.css'
-import './app.less'
+import './app.scss'
 
 class App extends React.Component {
   componentDidMount() {

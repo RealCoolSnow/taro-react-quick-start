@@ -1,13 +1,25 @@
 {
-  "miniprogramRoot": "./dist",
+  "miniprogramRoot": "dist/",
   "projectname": "taro-react-quick-start",
-  "description": "Quick start project with Taro &amp; React",
+  "description": "Quick start project with Taro &amp; React &amp; TypeScript.",
   "appid": "touristappid",
   "setting": {
     "urlCheck": true,
     "es6": false,
+    "enhance": false,
+    "compileHotReLoad": false,
     "postcss": false,
-    "minified": false
+    "preloadBackgroundData": false,
+    "minified": false,
+    "newFeature": true,
+    "autoAudits": false,
+    "coverView": true,
+    "showShadowRootInWxmlPanel": false,
+    "scopeDataCheck": false,
+    "useCompilerModule": false
   },
-  "compileType": "miniprogram"
+  "compileType": "miniprogram",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {}
 }

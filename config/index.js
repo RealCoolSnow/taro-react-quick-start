@@ -12,7 +12,13 @@ const config = {
   sourceRoot: 'src',
   outputRoot: `dist/${process.env.TARO_ENV}`,
   alias: {
-    '@/': path.resolve(__dirname, '..', 'src/')
+    // '@/*': path.resolve(__dirname, '..', 'src/*')
+    '@/components': path.resolve(__dirname, '..', 'src/components'),
+    '@/utils': path.resolve(__dirname, '..', 'src/utils'),
+    '@/store': path.resolve(__dirname, '..', 'src/store'),
+    '@/assets': path.resolve(__dirname, '..', 'src/assets'),
+    '@/service': path.resolve(__dirname, '..', 'src/service'),
+    '@/utils': path.resolve(__dirname, '..', 'src/utils')
   },
   plugins: [
     [
@@ -28,6 +34,10 @@ const config = {
     options: {}
   },
   framework: 'react',
+  compiler: 'webpack5',
+  cache: {
+    enable: false // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
+  },
   mini: {
     postcss: {
       pxtransform: {

@@ -7,7 +7,7 @@ import Counter from '@/components/Counter'
 import Language from '@/components/Language'
 import { RootState, Dispatch } from '@/store/index'
 import { helloGet } from '@/service/api'
-import './index.less'
+import './index.scss'
 
 const mapState = (state: RootState) => ({
   common: state.common

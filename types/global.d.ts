@@ -1,3 +1,5 @@
+/// <reference types="@tarojs/taro" />
+
 declare module '*.png';
 declare module '*.gif';
 declare module '*.jpg';
@@ -14,3 +16,4 @@ declare namespace NodeJS {
     TARO_ENV: 'weapp' | 'swan' | 'alipay' | 'h5' | 'rn' | 'tt' | 'quickapp' | 'qq' | 'jd'
   }
 }
+
