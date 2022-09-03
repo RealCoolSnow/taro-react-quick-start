@@ -1,5 +1,5 @@
 import { Dispatch, RootState } from '@/store'
-import { counterActions } from '@/store/counter'
+import { asyncAddNumber } from '@/store/counter/thunk'
 import { Button } from '@tarojs/components'
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -9,7 +9,7 @@ const Counter = () => {
   return (
     <>
       <Button
-        onClick={() => dispatch(counterActions.setNumber(1))}
+        onClick={() => dispatch(asyncAddNumber(1))}
         className='mt-1 w-full'
         type='warn'
       >

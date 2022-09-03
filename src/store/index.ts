@@ -14,7 +14,7 @@ const makeStore = () => {
   const store = configureStore({
     reducer: rootReducer,
     middleware: getDefaultMiddleware =>
-      getDefaultMiddleware({ thunk: false }).concat(middleware),
+      getDefaultMiddleware({ thunk: true }).concat(middleware),
     devTools: isDebug
   })
   return store

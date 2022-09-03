@@ -39,9 +39,7 @@ specifiers:
   react-dom: ^18.2.0
   react-redux: ^8.0.2
   react-refresh: ^0.11.0
-  redux: ^4.2.0
   redux-logger: ^3.0.6
-  redux-thunk: ^2.4.1
   stylelint: 9.3.0
   taro-hooks: latest
   terser-webpack-plugin: ^5.3.6
@@ -68,10 +66,8 @@ dependencies:
   '@tarojs/taro-h5': registry.npmmirror.com/@tarojs/taro-h5/3.5.5_@types+react@18.0.18
   react: registry.npmmirror.com/react/18.2.0
   react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
-  react-redux: registry.npmmirror.com/react-redux/8.0.2_afzcutvqlaje6u3hnrpfpd5dpq
-  redux: registry.npmmirror.com/redux/4.2.0
+  react-redux: registry.npmmirror.com/react-redux/8.0.2_63dfw6rfgd64rl77ptfma4cvt4
   redux-logger: registry.npmmirror.com/redux-logger/3.0.6
-  redux-thunk: registry.npmmirror.com/redux-thunk/2.4.1_redux@4.2.0
   taro-hooks: registry.npmmirror.com/taro-hooks/1.5.9_fv2azjbn4o4jjrnijlbgllvc7m
 
 devDependencies:
@@ -2556,7 +2552,7 @@ packages:
     dependencies:
       immer: registry.npmmirror.com/immer/9.0.15
       react: registry.npmmirror.com/react/18.2.0
-      react-redux: registry.npmmirror.com/react-redux/8.0.2_afzcutvqlaje6u3hnrpfpd5dpq
+      react-redux: registry.npmmirror.com/react-redux/8.0.2_63dfw6rfgd64rl77ptfma4cvt4
       redux: registry.npmmirror.com/redux/4.2.0
       redux-thunk: registry.npmmirror.com/redux-thunk/2.4.1_redux@4.2.0
       reselect: registry.npmmirror.com/reselect/4.1.6
@@ -13946,7 +13942,7 @@ packages:
       scheduler: registry.npmmirror.com/scheduler/0.21.0
     dev: false
 
-  registry.npmmirror.com/react-redux/8.0.2_afzcutvqlaje6u3hnrpfpd5dpq:
+  registry.npmmirror.com/react-redux/8.0.2_63dfw6rfgd64rl77ptfma4cvt4:
     resolution: {integrity: sha512-nBwiscMw3NoP59NFCXFf02f8xdo+vSHT/uZ1ldDwF7XaTpzm+Phk97VT4urYBl5TYAPNVaFm12UHAEyzkpNzRA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react-redux/-/react-redux-8.0.2.tgz}
     id: registry.npmmirror.com/react-redux/8.0.2
     name: react-redux
@@ -13978,7 +13974,6 @@ packages:
       react: registry.npmmirror.com/react/18.2.0
       react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
       react-is: registry.npmmirror.com/react-is/18.2.0
-      redux: registry.npmmirror.com/redux/4.2.0
       use-sync-external-store: registry.npmmirror.com/use-sync-external-store/1.2.0_react@18.2.0
     dev: false
 
