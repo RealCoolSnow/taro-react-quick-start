@@ -36,7 +36,7 @@
   "author": "CoolSnow(coolsnow2020@gmail.com)",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
-    "@rematch/core": "^2.2.0",
+    "@reduxjs/toolkit": "^1.8.5",
     "@tarojs/components": "3.5.5",
     "@tarojs/helper": "3.5.5",
     "@tarojs/plugin-framework-react": "3.5.5",
@@ -67,6 +67,7 @@
     "@tarojs/cli": "3.5.5",
     "@tarojs/webpack5-runner": "3.5.5",
     "@types/react": "^18.0.0",
+    "@types/redux-logger": "^3.0.9",
     "@types/webpack-env": "^1.13.6",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",

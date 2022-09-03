@@ -1,7 +1,7 @@
-import { store } from '@/store/index'
-import config from '../../config'
+import store from '@/store/index'
+import { baseUrl as _baseUrl } from '../../config'
 
-const baseUrl = config.baseUrl
+const baseUrl = _baseUrl
 
 const fullUrl = (url: string, params?: { [key: string]: any }) => {
   let a = `${baseUrl}/${url}`

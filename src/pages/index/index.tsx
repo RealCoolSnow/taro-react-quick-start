@@ -1,26 +1,17 @@
 import { View, Text, Navigator, Button, ITouchEvent } from '@tarojs/components'
-import { connect } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import Logo from '@/components/Logo'
 import { showAlert } from '@/utils/util'
 import Counter from '@/components/Counter'
 import Language from '@/components/Language'
-import { RootState, Dispatch } from '@/store/index'
+import { RootState, Dispatch } from '@/store'
 import { helloGet } from '@/service/api'
+import { commonActions } from '@/store/common'
 import './index.scss'
 
-const mapState = (state: RootState) => ({
-  common: state.common
-})
-
-const mapDispatch = (dispatch: Dispatch) => ({
-  setLanguage: dispatch.common.setLanguage
-})
-
-type StateProps = ReturnType<typeof mapState>
-type DispatchProps = ReturnType<typeof mapDispatch>
-type Props = StateProps & DispatchProps
-
-const Index = (props: Props) => {
+const Index = () => {
+  const language = useSelector((state: RootState) => state.common.language)
+  const dispatch = useDispatch<Dispatch>()
   const onClickHello = (event: ITouchEvent): void => {
     showAlert('hello', `${new Date().valueOf()}:${event.type}`)
   }
@@ -36,7 +27,7 @@ const Index = (props: Props) => {
       })
   }
   const onSwitchLanguage = () => {
-    props.setLanguage(props.common.language == 'en' ? 'cn' : 'en')
+    dispatch(commonActions.setLanguage(language == 'en' ? 'cn' : 'en'))
   }
   return (
     <View className='flex flex-col items-center px-4 py-1'>
@@ -47,7 +38,7 @@ const Index = (props: Props) => {
         <Logo />
       </View>
       <Button className='mt-1 w-full' type='primary' onClick={onSwitchLanguage}>
-        language: {props.common.language}
+        language: {language}
       </Button>
       <Language />
       <Counter />
@@ -65,4 +56,4 @@ const Index = (props: Props) => {
   )
 }
 
-export default connect(mapState, mapDispatch)(Index)
+export default Index

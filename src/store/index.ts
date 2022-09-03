@@ -1,10 +1,27 @@
-import { init, RematchDispatch, RematchRootState } from '@rematch/core'
-import { models, RootModel } from './models'
+import { combineReducers, configureStore } from '@reduxjs/toolkit'
+import logger from 'redux-logger'
+import { commonReducer } from './common'
+import { counterReducer } from './counter'
+import { isDebug } from '../config'
 
-export const store = init({
-  models
+const rootReducer = combineReducers({
+  common: commonReducer,
+  counter: counterReducer
 })
 
-export type Store = typeof store
-export type Dispatch = RematchDispatch<RootModel>
-export type RootState = RematchRootState<RootModel>
+const makeStore = () => {
+  const middleware = isDebug ? [logger] : []
+  const store = configureStore({
+    reducer: rootReducer,
+    middleware: getDefaultMiddleware =>
+      getDefaultMiddleware({ thunk: false }).concat(middleware),
+    devTools: isDebug
+  })
+  return store
+}
+
+const store = makeStore()
+
+export type RootState = ReturnType<typeof store.getState>
+export type Dispatch = typeof store.dispatch
+export default store

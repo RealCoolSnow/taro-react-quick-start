@@ -1,6 +1,7 @@
 import { Button } from '@tarojs/components'
 import { useDispatch, useSelector } from 'react-redux'
-import { Dispatch, RootState } from '@/store/index'
+import { Dispatch, RootState } from '@/store'
+import { commonActions } from '@/store/common'
 
 const Language = () => {
   const language = useSelector((state: RootState) => state.common.language)
@@ -11,7 +12,7 @@ const Language = () => {
         className='mt-1 w-full'
         type='primary'
         onClick={() =>
-          dispatch.common.setLanguage(language == 'en' ? 'cn' : 'en')
+          dispatch(commonActions.setLanguage(language == 'en' ? 'cn' : 'en'))
         }
       >
         Language(Hook):{language}
