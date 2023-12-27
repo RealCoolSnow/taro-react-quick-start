@@ -12,7 +12,7 @@
 
 - TypeScript
 
-- [windcss](https://windicss.org/)
+- [tailwindcss](https://www.tailwindcss.com/)
 
 ## Usage
 

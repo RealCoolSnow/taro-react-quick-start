@@ -1,4 +1,5 @@
 import path from 'path'
+import { UnifiedWebpackPluginV5 } from 'weapp-tailwindcss/webpack'
 
 const config = {
   projectName: 'taro-react-quick-start',
@@ -21,12 +22,6 @@ const config = {
     '@/utils': path.resolve(__dirname, '..', 'src/utils')
   },
   plugins: [
-    [
-      '@dcasia/mini-program-tailwind-webpack-plugin/dist/taro', {
-        //enableRpx: true,
-        enableDebugLog: true
-      }
-    ]
   ],
   defineConstants: {},
   copy: {
@@ -57,6 +52,18 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
+    },
+    webpackChain(chain, webpack) {
+      chain.merge({
+        plugin: {
+          install: {
+            plugin: UnifiedWebpackPluginV5,
+            args: [{
+              appType: 'taro'
+            }]
+          }
+        }
+      })
     }
   },
   h5: {
